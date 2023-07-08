@@ -1,0 +1,22 @@
+    .keypad {
+        height: 300px;
+        padding-bottom: 10px;
+        border-radius: 0 0 10px 10px;
+        background-color: #535557;
+        border-top: 2px solid black;
+        .number_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            float: left;
+        }
+
+        .operator_flexbox {
+            float: right;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .keypad_bottom {
+            display: flex;
+        }
+    }

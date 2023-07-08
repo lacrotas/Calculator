@@ -1,0 +1,23 @@
+.display {
+    background-color: #555758;
+    padding: 5px 20px;
+    width: 280px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    .display_container {
+        background-color: #bbd0c0;
+        padding-left: 15px;
+        border-radius: 10px;
+        .display_result {
+            padding: 30px 0 20px 0;
+            font-size: 20px;
+        }
+        .display_current {
+            position: absolute;
+            top: 20px;
+            left: 35px;
+            font-size: 10px;
+        }
+    }
+
+}

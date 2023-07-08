@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React from 'react';
+import ContextCalculator from './components/contextCalculator/ContextCalculator';
+import ReduxCalculator from './components/reduxCalculator/ReduxCalculator';
+import { useState } from 'react';
 
 function App() {
+  const [isContextCalc, setIsContextCalc] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='switch_container'>
+        <button className={'switch_button context context'+ isContextCalc} onClick={() => { setIsContextCalc(true) }}>Context</button>
+        <button className={'switch_button redux redux'+ !isContextCalc} onClick={() => { setIsContextCalc(false) }}>Redux</button>
+      </div>
+      {isContextCalc ? <ContextCalculator /> : <ReduxCalculator />}
     </div>
   );
 }
